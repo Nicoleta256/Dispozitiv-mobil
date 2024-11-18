@@ -1,0 +1,23 @@
+public class Smartwatch extends DispozitivMobil{
+    String culoare_ceas; //Graphite, Silver, Gold, Red luate de la https://www.gsmarena.com/apple_watch_series_9-12561.php -- apple watch 9
+    boolean rezistent_apa;
+    int spatiu_stocare;
+     public Smartwatch(){ //constructor fara argumente
+        super();
+        this.culoare_ceas = "Nespecificat";
+        this.rezistent_apa = false;
+        this.spatiu_stocare = 0;    
+    }
+    public Smartwatch(String culoare_ceas, boolean rezistent_apa, int spatiu_stocare,String model, String marca,double pret){ // cu argumente
+        super(model,marca,pret);
+        this.culoare_ceas = culoare_ceas;
+        this.rezistent_apa = rezistent_apa;
+       // this.spatiu_stocare = spatiu_stocare;
+    }
+    public Smartwatch(Smartwatch x){
+        super(x);
+        this.culoare_ceas = x.culoare_ceas;
+        this.rezistent_apa = x.rezistent_apa;
+        this.spatiu_stocare = x.spatiu_stocare;
+    }
+}
