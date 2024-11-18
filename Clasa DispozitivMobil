@@ -1,1 +1,23 @@
-
+public class DispozitivMobil {
+  private String marca;
+  private String model;
+  private double pret;
+public DispozitivMobil() {
+  this.marca= "Necunoscut";
+  this.model= "Necunoscut";
+  this.pret= 0.0;
+}
+public DispozitivMobil(String marca, String model, double pret){
+    this.marca=marca;
+    this.model=model;
+    this.pret=pret;
+}
+public DispozitivMobil(DispozitivMobil altDispozitivMobil){
+    this.marca=altDispozitivMobil.marca;
+    this.model=altDispozitivMobil.model;
+    this.pret=altDispozitivMobil.pret;
+}
+public String toString() {
+    return "DispozitivMobil [Marca: "+marca+", Model:"+model+",Pret:"+pret+"]";
+} 
+}
