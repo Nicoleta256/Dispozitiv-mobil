@@ -1,1 +1,25 @@
+public class Telefon extends DispozitivMobil {
+    private int capacitateBaterie; 
+    private boolean are5G;
 
+    public Telefon() {
+        super();
+        this.capacitateBaterie = 0;
+        this.are5G = false;
+    }
+    public Telefon(String marca, String model, double pret, int capacitateBaterie, boolean are5G) {
+        super(marca, model, pret);
+        this.capacitateBaterie = capacitateBaterie;
+        this.are5G = cu5G;
+    }
+    public Telefon(Telefon altTelefon) {
+        super(altTelefon);
+        this.capacitateBaterie = altTelefon.capacitateBaterie;
+        this.are5G = altTelefon.are5G;
+    }
+    @Override
+    public String toString() {
+        return "Telefon [Marca: " + marca + ", Model: " + model + ", Pret: " + pret +
+               ", Capacitate Baterie: " + capacitateBaterie + "mAh, Are 5G: " + are5G + "]";
+    }
+}
