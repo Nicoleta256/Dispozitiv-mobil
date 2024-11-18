@@ -1,0 +1,25 @@
+public class Tableta extends DispozitivMobil {
+    private double diagonalaEcran;
+    private boolean mufaTipC;
+    public Tableta() {
+        super();
+        this.diagonalaEcran = 0.0;
+        this.mufaTipC=false;
+    }
+    public Tableta(String marca, String model, double pret, double diagonalaEcran, boolean mufaTipC) {
+        super(marca, model, pret);
+        this.diagonalaEcran = diagonalaEcran;
+        this.mufaTipC= mufaTipC;
+    }
+    public Tableta(Tableta altaTableta) {
+        super(altaTableta);
+        this.diagonalaEcran = altaTableta.diagonalaEcran;
+        this.mufaTipC = altaTableta.mufaTipC;
+    }
+
+    @Override
+    public String toString() {
+        return "Tableta [Marca: " + marca + ", Model: " + model + ", Pret: " + pret +
+               ", Diagonala Ecran: " + diagonalaEcran + " inci, Mufa Tip C" + mufaTipC + "]";
+    }
+}
