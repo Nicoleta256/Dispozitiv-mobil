@@ -1,0 +1,25 @@
+class AccesoriiBrataraFitnes {
+
+    private String tip; 
+    private String material;
+
+    public AccesoriiBrataraFitnes() {
+        this.tip = "";
+        this.material = "";
+    }
+
+    public AccesoriiBrataraFitnes(String tip, String material) {
+        this.tip = tip;
+        this.material = material;
+    }
+
+    public AccesoriiBrataraFitnes(AccesoriiBrataraFitnes other) {
+        this.tip = other.tip;
+        this.material = other.material;
+    }
+
+    @Override
+    public String toString() {
+        return "AccesoriiBrataraFitnes [tip=" + tip + ", material=" + material + "]";
+    }
+}
