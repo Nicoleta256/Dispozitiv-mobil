@@ -1,0 +1,17 @@
+public class accesoriiSmartwatch extends Smartwatch{
+    String culoare_curea;
+    int dimensiune_curea;
+    public accesoriiSmartwatch(){
+        super();
+        this.culoare_ceas = "Nespecificat";
+        this.dimensiune_curea = 0;
+    }
+    public accesoriiSmartwatch(String culoare_curea, int dimensiune_curea){
+        this.culoare_ceas = culoare_curea;
+        this.dimensiune_curea = dimensiune_curea;
+    }
+    public accesoriiSmartwatch(accesoriiSmartwatch x){
+        this.culoare_ceas = x.culoare_ceas;
+        this.dimensiune_curea = x.dimensiune_curea;
+    }
+}
