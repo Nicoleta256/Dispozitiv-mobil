@@ -1,0 +1,29 @@
+class BrataraFitnes extends DispozitivMobil {
+
+    private int baterie; 
+    private boolean monitorizarePuls;
+
+
+    public BrataraFitnes() {
+        super();
+        this.baterie = 0;
+        this.monitorizarePuls = false;
+    }
+
+    public BrataraFitnes(String brand, String model, double pret, int baterie, boolean monitorizarePuls) {
+        super(brand, model, pret);
+        this.baterie = baterie;
+        this.monitorizarePuls = monitorizarePuls;
+    }
+
+    public BrataraFitnes(BrataraFitnes other) {
+        super(other);
+        this.baterie = other.baterie;
+        this.monitorizarePuls = other.monitorizarePuls;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", BrataraFitnes [baterie=" + baterie + ", monitorizarePuls=" + monitorizarePuls + "]";
+  }
+}
