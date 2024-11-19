@@ -2,22 +2,26 @@ public class DispozitivMobil {
   private String marca;
   private String model;
   private double pret;
+  private int an_lansare;
 public DispozitivMobil() {
   this.marca= "Necunoscut";
   this.model= "Necunoscut";
   this.pret= 0.0;
+  this.an_lansare= 0;
 }
 public DispozitivMobil(String marca, String model, double pret){
     this.marca=marca;
     this.model=model;
     this.pret=pret;
+    this.an_lansare=an_lansare;
 }
 public DispozitivMobil(DispozitivMobil altDispozitivMobil){
     this.marca=altDispozitivMobil.marca;
     this.model=altDispozitivMobil.model;
     this.pret=altDispozitivMobil.pret;
+    this.an_lansare=altDispozitivMobil.an_lansare;
 }
 public String toString() {
-    return "DispozitivMobil [Marca: "+marca+", Model:"+model+",Pret:"+pret+"]";
+    return "DispozitivMobil [Marca: "+marca+", Model:"+model+",Pret:"+pret+" An lansare: "+an_lansare" ]";
 } 
 }
