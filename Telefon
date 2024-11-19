@@ -1,21 +1,25 @@
  public class Telefon extends DispozitivMobil {
-    private int capacitateBaterie; 
+    private byte capacitateBaterie; 
     private boolean incarcarewifi;
+    private String culoare;
 
     public Telefon() {
         super();
         this.capacitateBaterie = 0;
         this.incarcarewifi = false;
+        this.culoare = "Necunoscut";
     }
-    public Telefon(String marca, String model, double pret, int capacitateBaterie, boolean incarcarewifi) {
-        super(marca, model, pret);
+    public Telefon(String marca, String model, float pret, int an_lansare, int capacitateBaterie, boolean incarcarewifi, String culoare) {
+        super(marca, model, pret, an_lansare);
         this.capacitateBaterie = capacitateBaterie;
         this.incarcarewifi = incarcarewifi ;
+        this.culoare = culoare;
     }
     public Telefon(Telefon altTelefon) {
         super(altTelefon);
         this.capacitateBaterie = altTelefon.capacitateBaterie;
         this.incarcarewifi = altTelefon.incarcarewifi;
+        this.culoare = culoare;
     }
     @Override
     public String toString() {
