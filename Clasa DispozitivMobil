@@ -3,11 +3,13 @@ public class DispozitivMobil {
   private String model;
   private double pret;
   private int an_lansare;
+  private double greutate;
 public DispozitivMobil() {
   this.marca= "Necunoscut";
   this.model= "Necunoscut";
   this.pret= 0.0;
   this.an_lansare= 0;
+  this.greutate =0.0;
 }
 public DispozitivMobil(String marca, String model, double pret){
     this.marca=marca;
