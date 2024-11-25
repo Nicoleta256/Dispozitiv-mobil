@@ -1,0 +1,4 @@
+public interface Interfata {
+    double calculeazaReducere(double procentReducere);
+    int calculeazaDurataLansare(String dataCurenta);
+}
