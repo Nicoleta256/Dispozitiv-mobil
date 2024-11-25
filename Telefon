@@ -3,13 +3,14 @@
     private boolean incarcarewifi;
     private String culoare;
     private boolean rezistentLaApa;
-
+    private boolean mufaTipC1 ;
     public Telefon() {
         super();
         this.capacitateBaterie = 0;
         this.incarcarewifi = false;
         this.culoare = "Necunoscut";
-        this.rezistentLaApa = false
+        this.rezistentLaApa = false;
+        this.mufaTipC1 = false;
     }
     public Telefon(String marca, String model, float pret, int an_lansare, int capacitateBaterie, boolean incarcarewifi, String culoare) {
         super(marca, model, pret, an_lansare);
