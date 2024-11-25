@@ -1,29 +1,71 @@
-public class DispozitivMobil {
-  private String marca;
-  private String model;
-  private double pret;
-  private int an_lansare;
-  private double greutate;
-public DispozitivMobil() {
-  this.marca= "Necunoscut";
-  this.model= "Necunoscut";
-  this.pret= 0.0;
-  this.an_lansare= 0;
-  this.greutate =0.0;
+public class DispozitivMobil implements Interfata{
+  public String marca;
+  public String model;
+  public double pret;
+  public String data_lansare;
+  public int greutate;
+  
+  public DispozitivMobil() {
+    this.marca= "Necunoscut";
+    this.model= "Necunoscut";
+    this.pret= 0.0;
+    this.data_lansare = "00.00.000";
+    this.greutate = 0;
 }
-public DispozitivMobil(String marca, String model, double pret){
+  public DispozitivMobil(String marca, String model, double pret,String data_lansare, int greutate){
     this.marca=marca;
     this.model=model;
     this.pret=pret;
-    this.an_lansare=an_lansare;
+    this.data_lansare = data_lansare;
+    this.greutate = greutate;
 }
-public DispozitivMobil(DispozitivMobil altDispozitivMobil){
+  public DispozitivMobil(DispozitivMobil altDispozitivMobil){
     this.marca=altDispozitivMobil.marca;
     this.model=altDispozitivMobil.model;
     this.pret=altDispozitivMobil.pret;
-    this.an_lansare=altDispozitivMobil.an_lansare;
+    this.data_lansare = altDispozitivMobil.data_lansare;
+    this.greutate = altDispozitivMobil.greutate;
 }
-public String toString() {
-    return "DispozitivMobil [Marca: "+marca+", Model:"+model+",Pret:"+pret+" An lansare: "+an_lansare" ]";
+@Override
+   public String toString() {
+     return "DispozitivMobil : [Marca: "+marca+", Model: "+model+", Pret: "+pret + ", Data lansare: " + data_lansare + ", Greutate: " + greutate + "]";
 } 
+   public void seteazaMarca(String marca){
+       this.marca = marca;
+   }
+   public void seteazaModel(String x){
+       this.model = x;
+   }
+   public void seteazaPret(double x){
+       this.pret = x;
+   }
+   public void seteazaDataLansare(String x){
+       this.data_lansare = x;
+   }
+   public void seteazaGreutate(int x){
+       this.greutate = x;
+   }
+   public String returneazaMarca(){
+       return marca;
+   }
+   public String returneazaModel(){
+       return model;
+   }
+   public double returneazaPret(){
+       return pret;
+   }
+   public String returneazaDataLansare(){
+       return data_lansare;
+   }
+   public double returneazaGreutate(){
+       return greutate;
+   }
+@Override
+    public double calculeazaReducere(double procentReducere) {
+        return pret - (pret * procentReducere / 100);
+    }
+@Override
+    public int calculeazaDurataLansare(String dataCurenta) {
+        return 0;
+    }
 }
