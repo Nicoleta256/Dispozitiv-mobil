@@ -24,4 +24,20 @@ public class Test {
     System.out.println(accesoriiSmartwatch2);
     System.out.println(accesoriiSmartwatch3);
 }
+
+
+Smartwatch[] smartwatchiuri = new Smartwatch[10];
+    DispozitivMobil[] dispozitive = new DispozitivMobil[10];
+    accesoriiSmartwatch[] accesorii = new accesoriiSmartwatch[10];
+    for (int i = 0; i < 10; i++) {
+        smartwatchiuri[i] = new Smartwatch();
+        dispozitive[i] = new DispozitivMobil();
+        accesorii[i] = new accesoriiSmartwatch(); 
+    }
+    for (int i = 0; i < 10; i++) {
+        System.out.println(smartwatchiuri[i]);
+        System.out.println(dispozitive[i]);
+        System.out.println(accesorii[i]);
+    }
+       
 }
