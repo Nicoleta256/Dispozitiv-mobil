@@ -30,8 +30,8 @@ public class DispozitivMobil implements Interfata{
    public String toString() {
      return "DispozitivMobil : [Marca: "+marca+", Model: "+model+", Pret: "+pret + ", Data lansare: " + data_lansare + ", Greutate: " + greutate + "]";
 } 
-   public void seteazaMarca(String marca){
-       this.marca = marca;
+   public void seteazaMarca(String x){
+       this.marca = x;
    }
    public void seteazaModel(String x){
        this.model = x;
@@ -59,13 +59,12 @@ public class DispozitivMobil implements Interfata{
    }
    public double returneazaGreutate(){
        return greutate;
-   }
+   }  
 @Override
     public double calculeazaReducere(double procentReducere) {
         return pret - (pret * procentReducere / 100);
     }
-@Override
-    public int calculeazaDurataLansare(String dataCurenta) {
-        return 0;
+@Override    
+   public double calculeazaRata(int numarLuni) {
+        return pret / numarLuni;
     }
-}
