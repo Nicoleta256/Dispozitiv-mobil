@@ -1,23 +1,73 @@
 public class Smartwatch extends DispozitivMobil{
-    String culoare_ceas; //Graphite, Silver, Gold, Red luate de la https://www.gsmarena.com/apple_watch_series_9-12561.php -- apple watch 9
-    boolean rezistent_apa;
-    int spatiu_stocare;
+   public String culoare_ceas; //Graphite, Silver, Gold, Red luate de la https://www.gsmarena.com/apple_watch_series_9-12561.php -- apple watch 9
+   public boolean rezistent_apa; //True or false
+   public short spatiu_stocare; // 32 x 64 x 128 ....
+   public byte nr_nuclee;  //single core / dual core
+   public boolean senzor_ritm_cardiac;
      public Smartwatch(){ //constructor fara argumente
         super();
         this.culoare_ceas = "Nespecificat";
         this.rezistent_apa = false;
-        this.spatiu_stocare = 0;    
+        this.spatiu_stocare = 0;   
+        this.nr_nuclee = 0;
+        this.senzor_ritm_cardiac = false;
     }
-    public Smartwatch(String culoare_ceas, boolean rezistent_apa, int spatiu_stocare,String model, String marca,double pret){ // cu argumente
-        super(model,marca,pret);
+    public Smartwatch(String marca, String model,double pret,String data_lansare,int greutate, String culoare_ceas, boolean rezistent_apa, short spatiu_stocare, byte nr_nuclee,boolean senzor_ritm_cardiac){ // cu argumente
+        super(marca,model,pret,data_lansare,greutate);
         this.culoare_ceas = culoare_ceas;
         this.rezistent_apa = rezistent_apa;
-       // this.spatiu_stocare = spatiu_stocare;
+        this.spatiu_stocare = spatiu_stocare;
+        this.nr_nuclee = nr_nuclee;
+        this.senzor_ritm_cardiac = senzor_ritm_cardiac;
     }
-    public Smartwatch(Smartwatch x){
+    public Smartwatch(Smartwatch x){ // de copiere
         super(x);
         this.culoare_ceas = x.culoare_ceas;
         this.rezistent_apa = x.rezistent_apa;
         this.spatiu_stocare = x.spatiu_stocare;
+        this.nr_nuclee = x.nr_nuclee;
+        this.senzor_ritm_cardiac = x.senzor_ritm_cardiac;
+    }
+    @Override
+    public String toString() {
+    return "Dispozitiv tip Smartwatch : [Marca: "+marca+", Model: "+model+", Pret: "+pret+ "," + " Data lansare: " + data_lansare + ", Greutate: " + greutate + ", Culoare: " + culoare_ceas + ", Rezistent apa: " + rezistent_apa + ", Spatiu stocare: " + spatiu_stocare + ", Numar nuclee: " + nr_nuclee + ", Senzor ritm cardiac: " +senzor_ritm_cardiac + "]" ;
+    }
+    public void seteazaCuloareCeas(String x){
+        this.culoare_ceas = x;
+    }
+    public void seteazaRezistentApa(boolean x){
+        this.rezistent_apa = x;
+    }
+    public void seteazaSpatiuStocare(short x){
+        this.spatiu_stocare = x;
+    }
+    public void seteazaNumarNuclee(byte x){
+        this.nr_nuclee = x;
+    }
+    public void seteazaSenzorRitmCardiac(boolean x){
+        this.senzor_ritm_cardiac = x;
+    }
+    public String returneazaCuloareCeas(){
+        return culoare_ceas;
+    } 
+    public boolean returneazaRezistentApa(){
+        return rezistent_apa;
+    } 
+    public short returneaSpatiuStocare(){
+        return spatiu_stocare;
+    } 
+    public byte returneazaNumarNuclee(){
+        return nr_nuclee;
+    } 
+    public boolean returneazaSenzorRitmCardiac(){
+        return senzor_ritm_cardiac;
+    } 
+    @Override
+    public double calculeazaReducere(double procentReducere) {
+        return pret - Math.round((pret * procentReducere / 100));
+    }
+@Override    
+   public double calculeazaRata(int numarLuni) {
+        return pret / numarLuni;
     }
 }
