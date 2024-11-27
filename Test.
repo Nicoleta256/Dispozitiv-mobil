@@ -1,0 +1,27 @@
+public class Test {
+    public static void main(String[] args) {
+    DispozitivMobil telefon1 = new DispozitivMobil("Apple", "iPhone 14 Pro Max", 7.561,"18.02.2004",253); //testam constructorul explicit
+    DispozitivMobil telefon2= new DispozitivMobil(); //testam constructorul implicit
+    DispozitivMobil telefon3= new DispozitivMobil(telefon1); //testam constructorul de copiere
+    
+    Smartwatch smartwatch1 = new Smartwatch("Apple", "Watch Series 9", 1799.99,"18.02.2023",42,"Graphite",true,(short)64,(byte)2,false);
+    Smartwatch smartwatch2 = new Smartwatch();
+    Smartwatch smartwatch3 = new Smartwatch(smartwatch1);
+    
+    accesoriiSmartwatch accesoriiSmartwatch1 = new accesoriiSmartwatch(smartwatch1,"rosu",56,"piele",true,true);
+    accesoriiSmartwatch accesoriiSmartwatch2 = new accesoriiSmartwatch();
+    accesoriiSmartwatch accesoriiSmartwatch3 = new accesoriiSmartwatch(accesoriiSmartwatch1);
+    
+    System.out.println(telefon1);
+    System.out.println(telefon2);
+    System.out.println(telefon3);
+    
+    System.out.println(smartwatch1);
+    System.out.println(smartwatch2);
+    System.out.println(smartwatch3);
+    
+    System.out.println(accesoriiSmartwatch1);
+    System.out.println(accesoriiSmartwatch2);
+    System.out.println(accesoriiSmartwatch3);
+}
+}
