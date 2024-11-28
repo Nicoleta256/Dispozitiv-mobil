@@ -1,9 +1,11 @@
+ @author Nicoleta
+ */
  public class Telefon extends DispozitivMobil {
-    private byte capacitateBaterie; 
-    private boolean incarcarewifi;
-    private String culoare;
-    private boolean rezistentLaApa;
-    private boolean mufaTipC1 ;
+    public byte capacitateBaterie; 
+    public boolean incarcarewifi;
+    public String culoare;
+    public boolean rezistentLaApa;
+    public boolean mufaTipC1 ;
     public Telefon() {
         super();
         this.capacitateBaterie = 0;
@@ -12,9 +14,9 @@
         this.rezistentLaApa = false;
         this.mufaTipC1 = false;
     }
-    public Telefon(String marca, String model, float pret, int an_lansare, int capacitateBaterie, boolean incarcarewifi, String culoare) {
-        super(marca, model, pret, an_lansare);
-        this.capacitateBaterie = capacitateBaterie;
+    public Telefon(String marca, String model, double pret, String culoare, int an_lansare, int capacitateBaterie, boolean incarcarewifi, String verde, boolean par4, boolean par5) {
+        super();
+        this.capacitateBaterie = (byte) capacitateBaterie;
         this.incarcarewifi = incarcarewifi ;
         this.culoare = culoare;
         this.rezistentLaApa = rezistentLaApa;
@@ -26,9 +28,51 @@
         this.culoare = culoare;
         this.rezistentLaApa = rezistentLaApa;
     }
+     public byte getCapacitateBaterie() {
+        return capacitateBaterie;
+    }
+
+    public void setCapacitateBaterie(byte capacitateBaterie) {
+        this.capacitateBaterie = capacitateBaterie;
+    }
+
+    public boolean getIncarcarewifi() {
+        return incarcarewifi;
+    }
+
+    public void setIncarcarewifi(boolean incarcarewifi) {
+        this.incarcarewifi = incarcarewifi;
+    }
+
+    public String getCuloare() {
+        return culoare;
+    }
+
+    public void setCuloare(String culoare) {
+        this.culoare = culoare;
+    }
+
+    public boolean getRezistentLaApa() {
+        return rezistentLaApa;
+    }
+
+    public void setRezistentLaApa(boolean rezistentLaApa) {
+        this.rezistentLaApa = rezistentLaApa;
+    }
+
+    public boolean getMufaTipC1() {
+        return mufaTipC1;
+    }
+
+    public void setMufaTipC1(boolean mufaTipC1) {
+        this.mufaTipC1 = mufaTipC1;
+    }
+
     @Override
     public String toString() {
         return "Telefon [Marca: " + marca + ", Model: " + model + ", Pret: " + pret +
-               ", Capacitate Baterie: " + capacitateBaterie + "mAh, Are incarcare wirelles: " + incarcarewifi + "]";
+               ", Capacitate Baterie: " + capacitateBaterie + "mAh, Are incarcare wireless: " + incarcarewifi +
+               ", Culoare: " + culoare + ", Rezistent la apa: " + rezistentLaApa + ", Mufa tip C: " + mufaTipC1 + "]";
     }
-}
+    }
+
