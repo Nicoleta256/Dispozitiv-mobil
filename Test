@@ -1,0 +1,36 @@
+package com.mycompany.dispozitivmobil;
+
+/**
+ *
+ * @author Nicoleta
+ */
+public class Test {
+    public static void main(String[] args) {
+    Telefon telefon1 = new Telefon("Samsung", " S23", 4456 ,"20.06.2023", 234, 3900, true, "Verde", true, true ); 
+    Telefon telefon2= new Telefon(); 
+    Telefon telefon3= new Telefon(telefon1); 
+    
+    Tableta tableta1 = new Tableta("Lenovo","Tab12",1699,"10.02.2024",193,12.7, true, 256, (byte) 5, "LTPS" ); 
+    Tableta tableta2= new Tableta(); 
+    Tableta tableta3= new Tableta(tableta1); 
+    
+    System.out.println(telefon1);
+    System.out.println(telefon2);
+    System.out.println(telefon3);
+     
+    System.out.println(tableta1);
+    System.out.println(tableta2);
+    System.out.println(tableta3);
+    
+    Telefon[] telefoane = new Telefon[10];
+    Tableta[] tablete = new Tableta[10];
+    for (int i = 0; i < 10; i++) {
+        telefoane[i] = new Telefon();
+        tablete[i] = new Tableta(); 
+    }
+    for (int i = 0; i < 10; i++) {
+        System.out.println(telefoane[i]);
+        System.out.println(tablete[i]);
+    }
+}
+}
