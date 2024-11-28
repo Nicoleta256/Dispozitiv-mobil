@@ -12,6 +12,14 @@ class accesoriiSmartwatch extends Smartwatch{
         this.folie_protectie = false;
         this.carcasa_protectie = false;   
     }
+public accesoriiSmartwatch(Smartwatch y, accesoriiSmartwatch x){
+        super(y);
+        this.culoare_curea = x.culoare_ceas;
+        this.dimensiune_curea = x.dimensiune_curea;
+        this.tip_curea = x.tip_curea;
+        this.folie_protectie = x.folie_protectie;
+        this.carcasa_protectie = x.carcasa_protectie;
+    }
     public accesoriiSmartwatch(String marca, String model,double pret,String data_lansare,int greutate, String culoare_ceas, boolean rezistent_apa, short spatiu_stocare, byte nr_nuclee,boolean senzor_ritm_cardiac,String culoare_curea, int dimensiune_curea,String tip_curea,boolean folie_protectie,boolean carcasa_protectie){
         super(marca,model,pret,data_lansare,greutate,culoare_ceas,rezistent_apa,spatiu_stocare,nr_nuclee,senzor_ritm_cardiac);
         this.culoare_curea = culoare_curea;
